@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {  NavLink } from 'react-router-dom';
+import { AuthContext } from '../Providers/AuthProvider';
 
 const Header = () => {
+  const { user ,logOut } = useContext(AuthContext)
+  
+  const handleLogOut = () => {
+    logOut()
+      .then(() => { })
+      .catch(error => {
+      console.log(error.message)
+    })
+  }
   const navItems = (
     <>
       <li>
@@ -28,33 +38,52 @@ const Header = () => {
           Blog
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          to="/myToys"
-          className={({ isActive }) => (isActive ? "text-primary" : "")}
-        >
-          My Toys
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/addAToys"
-          className={({ isActive }) => (isActive ? "text-primary" : "")}
-        >
-          Add A Toys
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/login"
-          className={({ isActive }) => (isActive ? " text-white" : "")}
-        >
-          <button className="btn btn-outline btn-primary hover:bg-purple-500 ">
-        
-            Login
-          </button>
-        </NavLink>
-      </li>
+      {user?.email ? (
+        <>
+          <li>
+            <NavLink
+              to="/myToys"
+              className={({ isActive }) => (isActive ? "text-primary" : "")}
+            >
+              My Toys
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/addAToys"
+              className={({ isActive }) => (isActive ? "text-primary" : "")}
+            >
+              Add A Toys
+            </NavLink>
+          </li>
+          <div className='flex items-center gap-4'>
+            <div className="avatar">
+              <div className="w-16 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                <img src="" />
+              </div>
+            </div>
+            <li>
+              <button
+                onClick={handleLogOut}
+                className="btn btn-outline btn-primary hover:bg-purple-500 "
+              >
+                Log out
+              </button>
+            </li>
+          </div>
+        </>
+      ) : (
+        <li>
+          <NavLink
+            to="/login"
+            className={({ isActive }) => (isActive ? " text-white" : "")}
+          >
+            <button className="btn btn-outline btn-primary hover:bg-purple-500 ">
+              Login
+            </button>
+          </NavLink>
+        </li>
+      )}
     </>
   );
   
