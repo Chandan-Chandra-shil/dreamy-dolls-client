@@ -14,7 +14,7 @@ const Register = () => {
     }
 
   return (
-    <div className=" container min-h-screen mx-auto  rounded-sm">
+    <div className=" container md:w-[100vh] mx-auto   rounded-sm">
       <div className="shadow mt-20 gap-4">
         <form onSubmit={handleRegister}>
           <div className="card-body  ">
@@ -56,8 +56,11 @@ const Register = () => {
               />
             </div>
             <div className="form-control mt-6">
-             
-              <input type="submit" className="btn btn-primary"  value="Register" />
+              <input
+                type="submit"
+                className="btn btn-primary"
+                value="Register"
+              />
             </div>
           </div>
 
