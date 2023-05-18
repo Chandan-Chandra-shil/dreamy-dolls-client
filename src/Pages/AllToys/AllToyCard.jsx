@@ -15,7 +15,7 @@ const AllToyCard = ({ toy }) => {
         <h2 className="text-lg font-semibold">Category : {category}</h2>
 
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
+          <button className="btn btn-primary">view details</button>
         </div>
       </div>
     </div>
