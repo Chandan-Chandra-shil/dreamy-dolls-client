@@ -7,11 +7,13 @@ import AddAToys from "../Pages/AddAToys/AddAToys";
 import Blog from "../Pages/Blog/Blog";
 import Login from "../Shared/Login";
 import Register from "../Shared/Register";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Main></Main>,
+    errorElement:<ErrorPage/>,
     children: [
       {
         path: '/',
