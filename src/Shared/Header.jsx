@@ -53,7 +53,7 @@ const Header = () => {
               to="/addAToys"
               className={({ isActive }) => (isActive ? "text-primary" : "")}
             >
-              Add A Toys
+              Add A Toy
             </NavLink>
           </li>
           <div className='flex items-center gap-4'>
