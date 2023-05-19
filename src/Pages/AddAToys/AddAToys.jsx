@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const AddAToys = () => {
-  const {user} = useContext(AuthContext)
+  const { user } = useContext(AuthContext)
+  console.log("666666666",user)
   const handleAddToy = event => {
     event.preventDefault()
     const form = event.target;
@@ -13,6 +14,7 @@ const AddAToys = () => {
     const category = form.category.value;
     const price = form.price.value;
     const rating = form.rating.value;
+    const quantity = form.quantity.value;
     const description = form.description.value;
   
 
@@ -24,6 +26,7 @@ const AddAToys = () => {
       category,
       price,
       rating,
+      quantity,
       description
     }
     console.log(allToys)
@@ -46,7 +49,7 @@ const AddAToys = () => {
 
   return (
     <div className="container mx-auto mb-10 ">
-      <form onSubmit={handleAddToy} >
+      <form onSubmit={handleAddToy}>
         <div className=" border shadow-md p-10 rounded-sm">
           <h1 className="text-4xl text-primary font-bold underline text-center">
             Add A Toy
@@ -64,7 +67,7 @@ const AddAToys = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text text-lg">Name</span>
+                <span className="label-text text-lg">Toy Name</span>
               </label>
               <input type="text" name="name" className="input input-bordered" />
             </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import dolls from "../../../assets/bdOne .jpg"
+
 import "./Gallery.css"
 const Gallery = () => {
   return (
