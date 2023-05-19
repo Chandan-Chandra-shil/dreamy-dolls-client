@@ -5,18 +5,15 @@ import ShopByCategoryCard from "./ShopByCategoryCard";
 
 const ShopByCategory = () => {
   const [dolls, setDolls] = useState([]);
-  const [active, setActive] = useState(" ");
-  console.log(dolls);
+  
+  
   useEffect(() => {
-    fetch(`http://localhost:5000/all-toys/${active}`)
+    fetch("http://localhost:5000/all-toys")
       .then((res) => res.json())
       .then((data) => setDolls(data));
-  }, [active]);
+  }, []);
 
-  const handleTabClick = (tabName) => {
-    setActive(tabName);
-    /*    alert("wow worked") */
-  };
+  
 
   return (
     <div className="container  mx-auto my-12">
@@ -25,9 +22,9 @@ const ShopByCategory = () => {
       </h1>
       <Tabs className="text-center">
         <TabList className="text-center text-2xl mb-10 underline py-6">
-          <Tab onClick={() => handleTabClick("babyDolls")}>Baby Dolls</Tab>
-          <Tab onClick={() => handleTabClick("barbie")}>barbie</Tab>
-          <Tab onClick={() => handleTabClick("americanGirl")}>
+          <Tab >Baby Dolls</Tab>
+          <Tab >barbie</Tab>
+          <Tab >
             American girl
           </Tab>
         </TabList>
@@ -43,7 +40,7 @@ const ShopByCategory = () => {
           <div className="grid sm:grid-cols-1  md:grid-cols-3 lg:grid-cols-4 gap-8">
             {dolls.map((doll) => (
               <ShopByCategoryCard
-                key={doll.key}
+                key={doll._id}
                 doll={doll}
               ></ShopByCategoryCard>
             ))}

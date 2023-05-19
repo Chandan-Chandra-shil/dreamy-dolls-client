@@ -13,11 +13,13 @@ const MyToys = () => {
 
   return (
     <div className="min-h-screen ">
-      <h1 className="text-center text-5xl text-purple-500 font-bold ">
-        My Toys
-      </h1>
-      <div className="overflow-x-auto  w-full ">
-        <table className="table  w-[100%">
+      <div>
+        <h1 className="text-center text-5xl py-6 mb-5   bg-purple-100 text-purple-500 font-bold ">
+          My Toys
+        </h1>
+      </div>
+      <div className="overflow-x-auto container mx-auto  w-full ">
+        <table className="table  w-full">
           {/* head */}
           <thead>
             <tr>
@@ -28,10 +30,8 @@ const MyToys = () => {
               <th>Price</th>
               <th>Rating</th>
               <th>Quantity</th>
-              <th>Description</th>
+              <th>Action</th>
 
-              <th>SellerName</th>
-              <th>SellerEmail</th>
               <th></th>
             </tr>
           </thead>
@@ -46,9 +46,14 @@ const MyToys = () => {
                 <td>{myToy.price}</td>
                 <td>{myToy.rating}</td>
                 <td>{myToy.quantity}</td>
-                <td>{myToy.description}</td>
-                <td>{myToy.sellerName}</td>
-                <td>{myToy.sellerEmail}</td>
+                <tb className=" flex gap-5">
+                  <span>
+                    <button className="btn btn-primary  btn-sm">Update</button>
+                  </span>
+                  <span>
+                    <button className="btn btn-error  btn-sm">Delete</button>
+                  </span>
+                </tb>
               </tr>
             ))}
           </tbody>

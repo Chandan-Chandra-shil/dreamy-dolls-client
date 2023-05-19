@@ -9,7 +9,7 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null)
   const [loading, setLoading] = useState(true)
   
-  console.log("authProvider",user?.displayName)
+  
   const createUser = (email, password) => {
     setLoading(true)
    return createUserWithEmailAndPassword(auth,email,password)
@@ -46,7 +46,8 @@ const AuthProvider = ({ children }) => {
     createUser,
     logIn,
     googleLogIn,
-    logOut
+    logOut,
+    loading
   }
 
 
