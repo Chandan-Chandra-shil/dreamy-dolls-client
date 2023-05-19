@@ -21,15 +21,28 @@ const ShopByCategory = () => {
   
 
   return (
-    <div className="container mx-auto my-12">
+    <div className="container  mx-auto my-12">
       <h1 className="text-center text-5xl font-bold text-purple-500">
         Shop By Category
       </h1>
       <Tabs className="text-center">
         <TabList className="text-center text-2xl mb-10 underline py-6">
-          <Tab onClick={() => handleTabClick("babyDolls")}>Baby Dolls</Tab>
-          <Tab onClick={() => handleTabClick("barbie")}>barbie</Tab>
-          <Tab onClick={() => handleTabClick("americanGirl")}>
+          <Tab
+            onClick={() => handleTabClick("babyDolls")}
+            className="btn btn-outline btn-primary"
+          >
+            Baby Dolls
+          </Tab>
+          <Tab
+            onClick={() => handleTabClick("barbie")}
+            className="btn btn-outline btn-primary"
+          >
+            barbie
+          </Tab>
+          <Tab
+            onClick={() => handleTabClick("americanGirl")}
+            className="btn btn-outline btn-primary"
+          >
             American girl
           </Tab>
         </TabList>
@@ -42,7 +55,7 @@ const ShopByCategory = () => {
         </TabPanel> */}
 
         <TabPanel>
-          <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-1  md:grid-cols-3 lg:grid-cols-4 gap-8">
             {dolls.map((doll) => (
               <ShopByCategoryCard
                 key={doll.key}
