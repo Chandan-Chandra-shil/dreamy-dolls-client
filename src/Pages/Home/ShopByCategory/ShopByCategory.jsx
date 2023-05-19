@@ -1,24 +1,22 @@
-
 import { useEffect, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import ShopByCategoryCard from "./ShopByCategoryCard";
 
 const ShopByCategory = () => {
-  const [dolls, setDolls] = useState([])
-  const [active,setActive] = useState(' ')
-  console.log(dolls)
+  const [dolls, setDolls] = useState([]);
+  const [active, setActive] = useState(" ");
+  console.log(dolls);
   useEffect(() => {
     fetch(`http://localhost:5000/all-toys/${active}`)
-      .then(res => res.json())
-    .then(data=>setDolls(data))
-  },[active])
+      .then((res) => res.json())
+      .then((data) => setDolls(data));
+  }, [active]);
 
   const handleTabClick = (tabName) => {
-    setActive(tabName)
- /*    alert("wow worked") */
-  }
-  
+    setActive(tabName);
+    /*    alert("wow worked") */
+  };
 
   return (
     <div className="container  mx-auto my-12">
@@ -27,22 +25,9 @@ const ShopByCategory = () => {
       </h1>
       <Tabs className="text-center">
         <TabList className="text-center text-2xl mb-10 underline py-6">
-          <Tab
-            onClick={() => handleTabClick("babyDolls")}
-            className="btn btn-outline btn-primary"
-          >
-            Baby Dolls
-          </Tab>
-          <Tab
-            onClick={() => handleTabClick("barbie")}
-            className="btn btn-outline btn-primary"
-          >
-            barbie
-          </Tab>
-          <Tab
-            onClick={() => handleTabClick("americanGirl")}
-            className="btn btn-outline btn-primary"
-          >
+          <Tab onClick={() => handleTabClick("babyDolls")}>Baby Dolls</Tab>
+          <Tab onClick={() => handleTabClick("barbie")}>barbie</Tab>
+          <Tab onClick={() => handleTabClick("americanGirl")}>
             American girl
           </Tab>
         </TabList>

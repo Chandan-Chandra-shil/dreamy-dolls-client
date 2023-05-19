@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../Providers/AuthProvider';
 
 const AllToyCard = ({ toy }) => {
+  const {user} = useContext(AuthContext)
   
   const { name, photo, price, quantity, category } = toy;
   return (
@@ -10,6 +12,7 @@ const AllToyCard = ({ toy }) => {
       </figure>
       <div className="card-body">
         <h2 className="card-title font-bold">{name}</h2>
+      
         <h2 className="text-lg font-semibold">Price : {price}</h2>
         <h2 className="text-lg font-semibold">Quantity : {quantity}</h2>
         <h2 className="text-lg font-semibold">Category : {category}</h2>
