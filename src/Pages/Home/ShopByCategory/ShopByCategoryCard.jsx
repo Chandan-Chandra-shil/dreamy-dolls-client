@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ShopByCategoryCard = ({ doll }) => {
   const { photo, name, price, rating, _id } = doll;
-  console.log(_id)
+  
   return (
     <div className="card w-96  hover:bg-purple-200  shadow-xl">
       <figure className="border-8">
@@ -15,7 +15,7 @@ const ShopByCategoryCard = ({ doll }) => {
         <h2 className="card-title">{rating}</h2>
 
         <div className="card-actions justify-end">
-          <Link to={`/singleToyDetail/${doll._id}`}>
+          <Link to={`/singleToyDetail/${_id}`}>
             <button className="btn btn-primary">View Details</button>
           </Link>
         </div>

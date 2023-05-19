@@ -49,6 +49,12 @@ const ShopByCategory = () => {
             ))}
           </div>
         </TabPanel>
+        <TabPanel>
+          <h1>hello</h1>
+        </TabPanel>
+        <TabPanel>
+          <h1>hello</h1>
+        </TabPanel>
       </Tabs>
     </div>
   );

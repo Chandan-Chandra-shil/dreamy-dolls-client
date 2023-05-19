@@ -1,13 +1,21 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
-
+import React from "react";
+import {  useLoaderData } from "react-router-dom";
 
 const SingleToyDetails = () => {
-  
-  const toyDetails = useLoaderData()
-  console.log("........toy",toyDetails)
+  const toyDetails = useLoaderData();
+  console.log("........toy", toyDetails);
 
-  const { name, description ,photo,price ,quantity,rating ,sellerName,sellerEmail} = toyDetails;
+  const {
+    
+    name,
+    description,
+    photo,
+    price,
+    quantity,
+    rating,
+    sellerName,
+    sellerEmail,
+  } = toyDetails;
   
 
   return (
@@ -26,7 +34,8 @@ const SingleToyDetails = () => {
             Seller Email : {sellerEmail}
           </h1>
           <p className="py-6">{description}</p>
-          <button className="btn btn-primary">Back Home Page</button>
+
+          <button className="btn btn-primary">View Details</button>
         </div>
       </div>
     </div>

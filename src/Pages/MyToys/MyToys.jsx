@@ -2,8 +2,8 @@ import React from 'react';
 
 const MyToys = () => {
   return (
-    <div>
-      <h1>my toys</h1>
+    <div className='min-h-screen'> 
+      <h1 className='text-center text-5xl text-purple-500 font-bold '>My Toys</h1>
       
     </div>
   );
