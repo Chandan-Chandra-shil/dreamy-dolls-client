@@ -43,8 +43,7 @@ const router = createBrowserRouter([
       {
         path: "/updateToy/:id",
         element: <UpdateToy></UpdateToy>,
-        loader: ({ params }) =>
-          fetch(`https://dreamy-dolls-server.vercel.app/all-toys/${params.id}`),
+        loader: ({ params }) => fetch(`https://dreamy-dolls-server.vercel.app/all-toys/${params.id}`),
       },
       {
         path: "/blog",

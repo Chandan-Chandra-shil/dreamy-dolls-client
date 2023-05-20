@@ -8,7 +8,7 @@ const UpdateToy = () => {
   const { photo, name, category, price, rating, quantity, description, _id } =
     toys;
 
-  console.log("id...............", toys);
+
   const handleUpdateToy = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -35,17 +35,17 @@ const UpdateToy = () => {
     };
     console.log(updateToy);
 
-    /* fetch(`https://dreamy-dolls-server.vercel.app//update-toy/${_id}`, {
-      method: "PUT",
+    fetch(`http://localhost:5000/update-toy/${_id}`, {
+      method: 'PATCH',
       headers: {
-        "content-type": "application/json",
+        'content-type':'application/json'
       },
-      body: JSON.stringify(updateToy),
+      body:JSON.stringify(updateToy)
     })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      }); */
+      .then(res => res.json())
+    .then(data=>console.log(data))
+
+   
   };
 
   return (

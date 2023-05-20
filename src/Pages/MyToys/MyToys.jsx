@@ -77,7 +77,7 @@ const MyToys = () => {
                   <span>
                     <Link to={`/updateToy/${myToy._id}`}>
                       <button className="btn btn-primary  btn-sm">
-                        Update
+                        Updated
                       </button>
                     </Link>
                   </span>
