@@ -1,19 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
 
 const ShopByCategoryCard = ({ doll }) => {
   const { photo, name, price, rating, _id } = doll;
-  
+
   return (
-    <div
-      
-      className="card w-96  hover:bg-purple-200   shadow-xl"
-    >
-      <figure className="border-8">
-        <img src={photo} alt="photo" />
+    <div className="md:card md:w-96 md:mx-4 sm:mx-5 hover:bg-purple-200   shadow-xl">
+      <figure className="md:border-8">
+        <img className="md:w-96" src={photo} alt="photo" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{name}</h2>

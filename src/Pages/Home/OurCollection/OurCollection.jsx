@@ -32,7 +32,7 @@ const OurCollection = () => {
       </div>
       <div className=" grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 sm:item-center gap-5 mb-5 ">
         <div data-aos="fade-up" data-aos-duration="3000" className="">
-          <img src={like1} alt="photo" />
+          <img className="w-96 px-5" src={like1} alt="photo" />
         </div>
         <div
           data-aos="fade-down"
@@ -40,10 +40,10 @@ const OurCollection = () => {
           data-aos-duration="1500"
           className=""
         >
-          <img src={like2} alt="photo" />
+          <img className="w-96 px-5" src={like2} alt="photo" />
         </div>
         <div data-aos="fade-up" data-aos-duration="3000" className="">
-          <img src={like3} alt="photo" />
+          <img className="w-96 px-5" src={like3} alt="photo" />
         </div>
         <div
           data-aos="fade-down"
@@ -51,10 +51,10 @@ const OurCollection = () => {
           data-aos-duration="1500"
           className=""
         >
-          <img src={like4} alt="photo" />
+          <img className="w-96 px-5" src={like4} alt="photo" />
         </div>
         <div data-aos="fade-up" data-aos-duration="3000" className="">
-          <img src={like5} alt="photo" />
+          <img className="w-96 px-5" src={like5} alt="photo" />
         </div>
         <div
           data-aos="fade-down"
@@ -62,10 +62,10 @@ const OurCollection = () => {
           data-aos-duration="1500"
           className=""
         >
-          <img src={like6} alt="photo" />
+          <img className="w-96 px-5" src={like6} alt="photo" />
         </div>
         <div data-aos="fade-up" data-aos-duration="3000" className="">
-          <img src={like7} alt="photo" />
+          <img className="w-96 px-5" src={like7} alt="photo" />
         </div>
         <div
           data-aos="fade-down"
@@ -73,7 +73,7 @@ const OurCollection = () => {
           data-aos-duration="1500"
           className=""
         >
-          <img src={like8} alt="photo" />
+          <img className="w-96 px-5" src={like8} alt="photo" />
         </div>
       </div>
     </div>

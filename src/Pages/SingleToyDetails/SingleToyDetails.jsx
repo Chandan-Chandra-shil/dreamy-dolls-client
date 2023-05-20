@@ -20,7 +20,7 @@ const SingleToyDetails = () => {
     <div className="min-h-screen">
       <div className="card mt-10  ">
         <figure>
-          <img  className="img-fluid border-8 w-96 border-purple-400" src={photo} alt="Album" />
+          <img  className="img-fluid border-8 md:w-96 border-purple-400" src={photo} alt="Album" />
         </figure>
         <div className="card-body text-center ">
           <h2 className="text-3xl font-bold">Name : {name}</h2>
