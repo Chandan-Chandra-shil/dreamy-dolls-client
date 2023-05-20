@@ -18,10 +18,10 @@ const OurCollection = () => {
   return (
     <div className="my-12 container mx-auto">
       <div className="text-center space-y-6 mb-12">
-        <h1 className="text-5xl font-bold text-purple-600">
+        <h1 className="text-4xl font-bold text-purple-500">
           Your online store of collectible dolls
         </h1>
-        <p>
+        <p className="text-lg">
           Find your dream doll in the largest catalog of collectible dolls.
           Discover the most exclusive limited series,
           <br /> the classic and modern dolls, the most tender and realistic

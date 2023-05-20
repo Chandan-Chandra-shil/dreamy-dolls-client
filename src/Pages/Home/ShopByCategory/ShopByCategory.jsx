@@ -15,7 +15,7 @@ const ShopByCategory = () => {
 
   return (
     <div className="container  mx-auto my-12">
-      <h1 className="text-center text-5xl font-bold text-purple-500">
+      <h1 className="text-center text-4xl font-bold text-purple-500">
         Shop By Category
       </h1>
       <Tabs className="text-center">

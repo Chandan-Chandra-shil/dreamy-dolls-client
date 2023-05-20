@@ -15,12 +15,15 @@ const Gallery = () => {
   return (
     <div className="container mx-auto py-12">
       <div className=" text-center py-8">
-        <h2 className="text-5xl font-bold mb-4 text-purple-500 ">Gallery</h2>
-        <p className="text-2xl border-b-8 pb-4  ">Our latest Dolls </p>
+        <h2 className="text-4xl font-bold mb-4 text-purple-500 ">Gallery</h2>
+        <p className="text-lg border-b-8 pb-4  ">
+          Explore our gallery of charming toy dolls that will capture your heart <br/>
+          with their delightful  designs and vibrant colors.
+        </p>
       </div>
       <div className="grid grid-cols-1 b sm:grid-cols-2   md:grid-cols-3 lg:grid-cols-4 gap-4">
         <div className="relative   ">
-          <div   className="rounded-lg overflow-hidden shadow">
+          <div className="rounded-lg overflow-hidden shadow">
             <img src={img1} alt="Image 1" className="w-full" />
           </div>
           <div className="absolute inset-0 bg-gray-100 bg-opacity-75 opacity-0 transition-opacity duration-300 flex items-center justify-center">
