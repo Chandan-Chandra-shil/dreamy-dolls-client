@@ -89,7 +89,7 @@ const Header = () => {
   );
   
   return (
-    <nav className=" bg-base-200 shadow-sm font-semibold">
+    <nav className=" bg-purple-200 shadow-sm font-semibold">
       <div className="navbar container mx-auto ">
         <div className="navbar-start">
           <div className="dropdown">

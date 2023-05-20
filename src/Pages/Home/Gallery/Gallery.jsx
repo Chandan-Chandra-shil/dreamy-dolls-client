@@ -15,7 +15,7 @@ const Gallery = () => {
   return (
     <div className="container mx-auto py-12">
       <div className=" text-center py-8">
-        <h2 className="text-5xl font-bold mb-4 ">Gallery</h2>
+        <h2 className="text-5xl font-bold mb-4 text-purple-500 ">Gallery</h2>
         <p className="text-2xl border-b-8 pb-4  ">Our latest Dolls </p>
       </div>
       <div className="grid grid-cols-1 b sm:grid-cols-2   md:grid-cols-3 lg:grid-cols-4 gap-4">
