@@ -10,7 +10,8 @@ import Register from "../Shared/Register";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import SingleToyDetails from "../Pages/SingleToyDetails/SingleToyDetails";
 import UpdateToy from "../Pages/UpdateToy/UpdateToy";
-import PrivateRoutes from "./PrivateRoutes";
+
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -33,18 +34,31 @@ const router = createBrowserRouter([
       },
       {
         path: "/addAToys",
-        element: <AddAToys></AddAToys>,
+        element: (
+          <PrivateRoute>
+            <AddAToys></AddAToys>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/singleToyDetail/:id",
-        element: <PrivateRoutes><SingleToyDetails></SingleToyDetails></PrivateRoutes>,
+        element: (
+          <PrivateRoute>
+            <SingleToyDetails></SingleToyDetails>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`https://dreamy-dolls-server.vercel.app/all-toys/${params.id}`),
       },
       {
         path: "/updateToy/:id",
-        element: <UpdateToy></UpdateToy>,
-        loader: ({ params }) => fetch(`https://dreamy-dolls-server.vercel.app/all-toys/${params.id}`),
+        element: (
+          <PrivateRoute>
+            <UpdateToy></UpdateToy>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`https://dreamy-dolls-server.vercel.app/all-toys/${params.id}`),
       },
       {
         path: "/blog",
