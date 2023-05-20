@@ -6,7 +6,7 @@ import ShopByCategoryCard from "./ShopByCategoryCard";
 const ShopByCategory = () => {
   const [dolls, setDolls] = useState([]);
 
-  console.log(dolls);
+  
   useEffect(() => {
     fetch("https://dreamy-dolls-server.vercel.app/all-toys")
       .then((res) => res.json())
@@ -36,7 +36,7 @@ const ShopByCategory = () => {
           <div className="grid sm:grid-cols-1  md:grid-cols-3 lg:grid-cols-4 gap-8">
             {dolls.map((doll) => (
               <ShopByCategoryCard
-                key={doll.key}
+                key={doll._id}
                 doll={doll}
               ></ShopByCategoryCard>
             ))}

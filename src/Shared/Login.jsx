@@ -81,7 +81,7 @@ const Login = () => {
           </div>
 
           <p className="text-center pb-8">
-            Dream Dolls New ?
+            Dreamy Dolls New ?
             <Link to="/register" className="text-primary">
               Register
             </Link>

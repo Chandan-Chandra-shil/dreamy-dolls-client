@@ -116,7 +116,7 @@ const Header = () => {
               {navItems}
             </ul>
           </div>
-          <a  className=" hover:text-primary normal-case text-xl flex items-center gap-5">
+          <a  className=" hover:text-primary normal-case font-mono font-extrabold text-xl flex items-center gap-5">
             <GiftIcon className="h-12 w-12 text-purple-600" /> Dreamy Dolls
           </a>
         </div>
