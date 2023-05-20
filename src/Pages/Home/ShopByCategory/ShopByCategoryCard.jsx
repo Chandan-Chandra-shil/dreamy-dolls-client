@@ -8,9 +8,12 @@ const ShopByCategoryCard = ({ doll }) => {
   const { photo, name, price, rating, _id } = doll;
   
   return (
-    <div className="card w-96  hover:bg-purple-200  shadow-xl">
+    <div
+      
+      className="card w-96  hover:bg-purple-200   shadow-xl"
+    >
       <figure className="border-8">
-        <img src={photo} alt="Shoes" />
+        <img src={photo} alt="photo" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{name}</h2>

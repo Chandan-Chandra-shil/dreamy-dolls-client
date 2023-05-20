@@ -1,5 +1,6 @@
 import React from "react";
 
+
 import img1 from "../../../assets/gellary1.jpg";
 import img2 from "../../../assets/gellary2.jpg";
 import dolls from "../../../assets/bdOne .jpg";
@@ -19,7 +20,7 @@ const Gallery = () => {
       </div>
       <div className="grid grid-cols-1 b sm:grid-cols-2   md:grid-cols-3 lg:grid-cols-4 gap-4">
         <div className="relative   ">
-          <div className="rounded-lg overflow-hidden shadow">
+          <div   className="rounded-lg overflow-hidden shadow">
             <img src={img1} alt="Image 1" className="w-full" />
           </div>
           <div className="absolute inset-0 bg-gray-100 bg-opacity-75 opacity-0 transition-opacity duration-300 flex items-center justify-center">
