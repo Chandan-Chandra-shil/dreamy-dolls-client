@@ -1,12 +1,11 @@
 import React from "react";
-import {  useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
 const SingleToyDetails = () => {
   const toyDetails = useLoaderData();
   console.log("........toy", toyDetails);
 
   const {
-    
     name,
     description,
     photo,
@@ -16,26 +15,33 @@ const SingleToyDetails = () => {
     sellerName,
     sellerEmail,
   } = toyDetails;
-  
 
   return (
-    <div className="  min-h-screen bg-purple-100 ">
-      <div className="   sm:flex flex justify-center items-center ">
-        <div className=" border p-12">
-          <img src={photo} className=" w-full " />
-        </div>
-        <div>
-          <h1 className="text-5xl font-bold">{name}</h1>
-          <h1 className="text-2xl font-bold">Price :{price}</h1>
-          <h1 className="text-2xl font-bold">Quantity :{quantity}</h1>
-          <h1 className="text-2xl font-bold">{rating}</h1>
-          <h1 className="text-2xl font-semibold">Seller Name : {sellerName}</h1>
-          <h1 className="text-2xl font-semibold">
-            Seller Email : {sellerEmail}
-          </h1>
-          <p className="py-6">{description}</p>
+    <div className="min-h-screen">
+      <div className="card mt-10  ">
+        <figure>
+          <img  className="img-fluid border-8 w-96 border-purple-400" src={photo} alt="Album" />
+        </figure>
+        <div className="card-body text-center ">
+          <h2 className="text-3xl font-bold">Name : {name}</h2>
+          <h2 className=" text-2xt font-semibold">Price : ${price}</h2>
+          <h2 className="text-2xt font-semibold">Quantity : {quantity}</h2>
 
-          <button className="btn btn-primary">View Details</button>
+          {sellerName ? (
+            <h2 className="text-2xt font-semibold">
+              Seller Name :{sellerName?.sellerName}
+            </h2>
+          ) : (
+            ""
+          )}
+          <h2 className="text-2xt font-semibold">
+            Seller Email : {sellerEmail}
+            <h2>{rating}</h2>
+          </h2>
+          <p>
+            <span className="text-2xl font-bold">Description </span> 
+            <span className="text-lg">{description}</span>
+          </p>
         </div>
       </div>
     </div>
