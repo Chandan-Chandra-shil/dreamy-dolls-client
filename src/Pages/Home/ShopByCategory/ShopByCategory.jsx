@@ -6,14 +6,13 @@ import ShopByCategoryCard from "./ShopByCategoryCard";
 const ShopByCategory = () => {
   const [dolls, setDolls] = useState([]);
   
-  
+  console.log(dolls);
   useEffect(() => {
     fetch("http://localhost:5000/all-toys")
       .then((res) => res.json())
       .then((data) => setDolls(data));
   }, []);
 
-  
 
   return (
     <div className="container  mx-auto my-12">
@@ -40,7 +39,7 @@ const ShopByCategory = () => {
           <div className="grid sm:grid-cols-1  md:grid-cols-3 lg:grid-cols-4 gap-8">
             {dolls.map((doll) => (
               <ShopByCategoryCard
-                key={doll._id}
+                key={doll.key}
                 doll={doll}
               ></ShopByCategoryCard>
             ))}

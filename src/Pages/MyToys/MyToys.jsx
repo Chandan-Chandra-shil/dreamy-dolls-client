@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
@@ -10,6 +11,31 @@ const MyToys = () => {
       .then((res) => res.json())
       .then((data) => setMyToys(data));
   }, [user]);
+
+  const handleDelete = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/all-toys/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log("delete....", data);
+            if (data.deletedCount > 0) {
+              Swal.fire("Deleted!", "Your file has been deleted.", "success");
+            }
+          });
+      }
+    });
+  };
 
   return (
     <div className="min-h-screen ">
@@ -51,7 +77,12 @@ const MyToys = () => {
                     <button className="btn btn-primary  btn-sm">Update</button>
                   </span>
                   <span>
-                    <button className="btn btn-error  btn-sm">Delete</button>
+                    <button
+                      onClick={() => handleDelete(myToy._id)}
+                      className="btn btn-error  btn-sm"
+                    >
+                      Delete
+                    </button>
                   </span>
                 </tb>
               </tr>
