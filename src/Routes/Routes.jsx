@@ -13,9 +13,11 @@ import UpdateToy from "../Pages/UpdateToy/UpdateToy";
 
 import PrivateRoute from "./PrivateRoute";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
+    
     element: <Main></Main>,
     errorElement: <ErrorPage />,
 
@@ -72,6 +74,7 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>,
       },
+     
     ],
   },
 ]);
