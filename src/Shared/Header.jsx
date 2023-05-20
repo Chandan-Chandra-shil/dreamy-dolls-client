@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import {  NavLink } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
+import { GiftIcon } from "@heroicons/react/24/solid";
 
 const Header = () => {
   const { user ,logOut } = useContext(AuthContext)
@@ -115,7 +116,9 @@ const Header = () => {
               {navItems}
             </ul>
           </div>
-          <a className=" hover:text-primary normal-case text-xl">Dreamy Dolls</a>
+          <a  className=" hover:text-primary normal-case text-xl flex items-center gap-5">
+            <GiftIcon className="h-12 w-12 text-purple-600" /> Dreamy Dolls
+          </a>
         </div>
         <div className="navbar-end hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navItems}</ul>
