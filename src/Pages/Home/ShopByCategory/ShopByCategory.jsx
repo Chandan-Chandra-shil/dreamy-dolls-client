@@ -5,14 +5,13 @@ import ShopByCategoryCard from "./ShopByCategoryCard";
 
 const ShopByCategory = () => {
   const [dolls, setDolls] = useState([]);
-  
+
   console.log(dolls);
   useEffect(() => {
-    fetch("http://localhost:5000/all-toys")
+    fetch("https://dreamy-dolls-server.vercel.app/all-toys")
       .then((res) => res.json())
       .then((data) => setDolls(data));
   }, []);
-
 
   return (
     <div className="container  mx-auto my-12">
@@ -21,11 +20,9 @@ const ShopByCategory = () => {
       </h1>
       <Tabs className="text-center">
         <TabList className="text-center text-2xl mb-10 underline py-6">
-          <Tab >Baby Dolls</Tab>
-          <Tab >barbie</Tab>
-          <Tab >
-            American girl
-          </Tab>
+          <Tab>Baby Dolls</Tab>
+          <Tab>barbie</Tab>
+          <Tab>American girl</Tab>
         </TabList>
 
         {/* <TabPanel>

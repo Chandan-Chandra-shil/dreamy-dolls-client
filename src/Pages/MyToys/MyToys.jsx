@@ -1,13 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [myToys, setMyToys] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/my-toys/${user?.email}`)
+    fetch(`https://dreamy-dolls-server.vercel.app/my-toys/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setMyToys(data));
   }, [user]);
@@ -23,7 +24,7 @@ const MyToys = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/all-toys/${id}`, {
+        fetch(`https://dreamy-dolls-server.vercel.app/all-toys/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -74,7 +75,11 @@ const MyToys = () => {
                 <td>{myToy.quantity}</td>
                 <tb className=" flex gap-5">
                   <span>
-                    <button className="btn btn-primary  btn-sm">Update</button>
+                    <Link to={`/updateToy/${myToy._id}`}>
+                      <button className="btn btn-primary  btn-sm">
+                        Update
+                      </button>
+                    </Link>
                   </span>
                   <span>
                     <button

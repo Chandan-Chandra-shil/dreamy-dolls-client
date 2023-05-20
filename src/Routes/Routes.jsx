@@ -9,6 +9,7 @@ import Login from "../Shared/Login";
 import Register from "../Shared/Register";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import SingleToyDetails from "../Pages/SingleToyDetails/SingleToyDetails";
+import UpdateToy from "../Pages/UpdateToy/UpdateToy";
 
 const router = createBrowserRouter([
   {
@@ -36,7 +37,14 @@ const router = createBrowserRouter([
       {
         path: "/singleToyDetail/:id",
         element: <SingleToyDetails></SingleToyDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/all-toys/${params.id}`),
+        loader: ({ params }) =>
+          fetch(`https://dreamy-dolls-server.vercel.app/all-toys/${params.id}`),
+      },
+      {
+        path: "/updateToy/:id",
+        element: <UpdateToy></UpdateToy>,
+        loader: ({ params }) =>
+          fetch(`https://dreamy-dolls-server.vercel.app/all-toys/${params.id}`),
       },
       {
         path: "/blog",
