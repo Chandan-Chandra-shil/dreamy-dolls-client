@@ -7,9 +7,9 @@ const Footer = () => {
       <div>
         <span className="footer-title">Services</span>
         <a className="link link-hover">Branding</a>
-        <a className="link link-hover">Design</a>
-        <a className="link link-hover">Marketing</a>
-        <a className="link link-hover">Advertisement</a>
+        <a className="link link-hover">Customer Support</a>
+        <a className="link link-hover">Product Catalog</a>
+        <a className="link link-hover">Product Recommendations</a>
       </div>
       <div>
         <span className="footer-title">Company</span>
@@ -45,11 +45,9 @@ const Footer = () => {
               <FaLinkedin className="w-8 h-8 text-purple-600"></FaLinkedin>
             </a>
             <a href="https://www.youtube.com/" target="blank">
-            
               <FaYoutube className="w-8 h-8 text-purple-600"></FaYoutube>
             </a>
           </div>
-          
         </div>
       </div>
     </footer>
