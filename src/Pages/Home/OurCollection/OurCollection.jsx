@@ -21,7 +21,7 @@ const OurCollection = () => {
         <h1 className="text-4xl font-bold font-mono text-purple-500">
           Your online store of collectible dolls
         </h1>
-        <p className="text-lg">
+        <p className="text-md">
           Find your dream doll in the largest catalog of collectible dolls.
           Discover the most exclusive limited series,
           <br /> the classic and modern dolls, the most tender and realistic

@@ -78,17 +78,8 @@ const AllToys = () => {
               </tr>
             ))}
           </tbody>
-          {/* foot */}
-          <tfoot>
-            <tr>
-              <th>Name</th>
-              <th>Job</th>
-              <th>Favorite</th>
-              <th>Favorite</th>
-              <th>Favorite</th>
-              <th>Favorite</th>
-            </tr>
-          </tfoot>
+          
+          
         </table>
       </div>
     </div>
