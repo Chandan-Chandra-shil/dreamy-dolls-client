@@ -15,7 +15,7 @@ const Gallery = () => {
   return (
     <div className="container mx-auto py-12">
       <div className=" text-center py-8">
-        <h2 className="text-4xl font-bold mb-4 text-purple-500 ">Gallery</h2>
+        <h2 className="text-4xl font-bold mb-4 font-mono text-purple-500 ">Gallery</h2>
         <p className="text-lg border-b-8 pb-4  ">
           Explore our gallery of charming toy dolls that will capture your heart <br/>
           with their delightful  designs and vibrant colors.

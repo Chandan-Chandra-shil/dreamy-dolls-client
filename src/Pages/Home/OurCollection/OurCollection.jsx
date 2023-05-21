@@ -18,7 +18,7 @@ const OurCollection = () => {
   return (
     <div className="my-12 container mx-auto">
       <div className="text-center space-y-6 mb-12">
-        <h1 className="text-4xl font-bold text-purple-500">
+        <h1 className="text-4xl font-bold font-mono text-purple-500">
           Your online store of collectible dolls
         </h1>
         <p className="text-lg">

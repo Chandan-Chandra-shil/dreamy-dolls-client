@@ -26,7 +26,7 @@ const ShopByCategoryCard = ({ doll }) => {
 
         <div className="card-actions justify-end">
           <Link to={`/singleToyDetail/${_id}`}>
-            <button className="btn btn-primary">View Details</button>
+            <button className="btn btn-primary font-mono">View Details</button>
           </Link>
         </div>
       </div>
