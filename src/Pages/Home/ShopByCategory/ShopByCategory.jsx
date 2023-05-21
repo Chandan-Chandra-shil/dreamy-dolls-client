@@ -21,7 +21,7 @@ const ShopByCategory = () => {
       <Tabs className="text-center">
         <TabList className="text-center text-2xl mb-10 underline py-6">
           <Tab>Baby Dolls</Tab>
-          <Tab>barbie</Tab>
+          <Tab>Barbie</Tab>
           <Tab>American girl</Tab>
         </TabList>
 

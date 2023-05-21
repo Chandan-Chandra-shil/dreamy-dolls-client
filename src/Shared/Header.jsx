@@ -39,7 +39,7 @@ const Header = () => {
           Blog
         </NavLink>
       </li>
-      {user?.email ? (
+      {user? (
         <>
           <li>
             <NavLink
@@ -60,7 +60,7 @@ const Header = () => {
           <div className='flex items-center gap-4'>
             <div className="avatar">
               <div className="w-16 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src="" />
+                <img src={user?.photoURL} />
               </div>
             </div>
             <li>
