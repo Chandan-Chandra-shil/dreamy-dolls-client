@@ -9,15 +9,19 @@ const AllToys = () => {
     setSearchTerm(e.target.value);
   };
 
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Perform search operation with searchTerm
+
+
 
     // Reset the search input field
     setSearchTerm("");
   };
 
-  console.log(toys);
+ 
 
   useEffect(() => {
     fetch("https://dreamy-dolls-server.vercel.app/all-toys")
