@@ -23,8 +23,8 @@ const Login = () => {
         const loggedUser = result.user;
         console.log(loggedUser)
         setSuccess('user logged successfully')
-        form.reset("")
         navigate(from,{replace:true})
+        form.reset("")
       })
       .catch(error => {
         console.log(error.message)
@@ -40,7 +40,7 @@ const Login = () => {
   }
 
   return (
-    <div className=" container md:w-[100vh] mx-auto  rounded-sm">
+    <div className=" container min-h-screen mx-auto  rounded-sm">
       <div className="shadow mt-20 gap-4">
         <form onSubmit={handleLogin}>
           <div className="card-body  ">
@@ -72,7 +72,7 @@ const Login = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <input type="submit" value="submit" className="btn btn-primary" />
+              <input type="submit" value="Login" className="btn btn-primary" />
             </div>
             <div className=" ">
               <p className="text-center">OR</p>

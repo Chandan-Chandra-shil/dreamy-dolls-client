@@ -3,24 +3,27 @@ import { AuthContext } from "../Providers/AuthProvider";
 import { useContext } from "react";
 
 const Register = () => {
-
-  const {createUser} = useContext(AuthContext)
+  const { createUser } = useContext(AuthContext);
   const handleRegister = (event) => {
     event.preventDefault();
+
     const form = event.target;
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
     const photo = form.photo.value;
+
     console.log(name, email, password, photo);
     createUser(email, password)
-      .then(result => {
+      .then((result) => {
         const newUser = result.user;
-        console.log(newUser)
+        form.reset();
+
+        console.log(newUser);
       })
-      .catch(error => {
-      console.log(error.message)
-    })
+      .catch((error) => {
+        console.log(error.message);
+      });
   };
 
   return (
@@ -42,6 +45,7 @@ const Register = () => {
               <input
                 type="email"
                 name="email"
+                required
                 className="input input-bordered"
               />
             </div>
@@ -52,6 +56,7 @@ const Register = () => {
               <input
                 type="password"
                 name="password"
+                required
                 className="input input-bordered"
               />
             </div>
@@ -65,6 +70,7 @@ const Register = () => {
                 className="input input-bordered"
               />
             </div>
+
             <div className="form-control mt-6">
               <input
                 type="submit"

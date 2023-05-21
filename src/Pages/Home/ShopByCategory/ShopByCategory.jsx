@@ -13,6 +13,12 @@ const ShopByCategory = () => {
       .then((data) => setDolls(data));
   }, []);
 
+  const babyDolls = dolls.filter((doll) => doll.category === "Baby Dolls");
+  const barbies = dolls.filter((doll) => doll.category === "Barbie");
+  const americans = dolls.filter((doll) => doll.category === "American Girl");
+  
+
+
   return (
     <div className="container  mx-auto my-12">
       <h1 className="text-center text-4xl font-bold text-purple-500">
@@ -34,7 +40,7 @@ const ShopByCategory = () => {
 
         <TabPanel>
           <div className="grid sm:grid-cols-1  md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {dolls.map((doll) => (
+            {babyDolls.map((doll) => (
               <ShopByCategoryCard
                 key={doll._id}
                 doll={doll}
@@ -43,10 +49,24 @@ const ShopByCategory = () => {
           </div>
         </TabPanel>
         <TabPanel>
-          <h1>hello</h1>
+          <div className="grid sm:grid-cols-1  md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {barbies.map((doll) => (
+              <ShopByCategoryCard
+                key={doll._id}
+                doll={doll}
+              ></ShopByCategoryCard>
+            ))}
+          </div>
         </TabPanel>
         <TabPanel>
-          <h1>hello</h1>
+          <div className="grid sm:grid-cols-1  md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {americans.map((doll) => (
+              <ShopByCategoryCard
+                key={doll._id}
+                doll={doll}
+              ></ShopByCategoryCard>
+            ))}
+          </div>
         </TabPanel>
       </Tabs>
     </div>

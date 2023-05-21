@@ -9,19 +9,16 @@ const AllToys = () => {
     setSearchTerm(e.target.value);
   };
 
-
-
   const handleSubmit = (e) => {
     e.preventDefault();
     // Perform search operation with searchTerm
 
+    const toyFilter = toys.filter(
+      (toy) => toy.name.toLowerCase() === searchTerm.toLowerCase()
+    );
 
-
-    // Reset the search input field
-    setSearchTerm("");
+    setToys(toyFilter);
   };
-
- 
 
   useEffect(() => {
     fetch("https://dreamy-dolls-server.vercel.app/all-toys")
@@ -82,8 +79,6 @@ const AllToys = () => {
               </tr>
             ))}
           </tbody>
-          
-          
         </table>
       </div>
     </div>

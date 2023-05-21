@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const AddAToys = () => {
@@ -90,14 +90,12 @@ const AddAToys = () => {
               />
             </div>
             <div className="form-control">
-              <label className="label">
-                <span className="label-text text-lg">Sub-category</span>
-              </label>
-              <input
-                type="text"
-                name="category"
-                className="input input-bordered"
-              />
+              <select name="category">
+                <option>Select a Category</option>
+                <option value="Baby Dolls">Baby Dolls</option>
+                <option value="Barbie">Barbie</option>
+                <option value="American Girl">American Girl</option>
+              </select>
             </div>
             <div className="form-control">
               <label className="label">

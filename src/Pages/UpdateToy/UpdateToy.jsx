@@ -5,9 +5,7 @@ import { useLoaderData } from "react-router-dom";
 const UpdateToy = () => {
   const { user } = useContext(AuthContext);
   const toys = useLoaderData();
-  const { photo, name, category, price, rating, quantity, description, _id } =
-    toys;
-
+  const { photo, name, price, rating, quantity, description, _id } = toys;
 
   const handleUpdateToy = (event) => {
     event.preventDefault();
@@ -36,16 +34,14 @@ const UpdateToy = () => {
     console.log(updateToy);
 
     fetch(`http://localhost:5000/update-toy/${_id}`, {
-      method: 'PATCH',
+      method: "PATCH",
       headers: {
-        'content-type':'application/json'
+        "content-type": "application/json",
       },
-      body:JSON.stringify(updateToy)
+      body: JSON.stringify(updateToy),
     })
-      .then(res => res.json())
-    .then(data=>console.log(data))
-
-   
+      .then((res) => res.json())
+      .then((data) => console.log(data));
   };
 
   return (
@@ -101,15 +97,12 @@ const UpdateToy = () => {
               />
             </div>
             <div className="form-control">
-              <label className="label">
-                <span className="label-text text-lg">Sub-category</span>
-              </label>
-              <input
-                type="text"
-                name="category"
-                defaultValue={category}
-                className="input input-bordered"
-              />
+              <select name="category">
+                <option>Select a Category</option>
+                <option value="Baby Dolls">Baby Dolls</option>
+                <option value="Barbie">Barbie</option>
+                <option value="American Girl">American Girl</option>
+              </select>
             </div>
             <div className="form-control">
               <label className="label">
