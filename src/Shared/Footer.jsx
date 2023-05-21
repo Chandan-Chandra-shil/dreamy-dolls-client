@@ -12,7 +12,7 @@ const Footer = () => {
         <a className="link link-hover">Product Recommendations</a>
       </div>
       <div>
-        <span className="footer-title">Company</span>
+        <span className="footer-title">Useful Links</span>
 
         <Link to="/" className="link link-hover">
           Home
