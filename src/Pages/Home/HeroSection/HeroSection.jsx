@@ -1,17 +1,19 @@
-import React from 'react';
 
+import homeBanner from "../../../assets/homeBanner.jpg"
 const HeroSection = () => {
   return (
     <div
       className="hero min-h-screen"
       style={{
-        backgroundImage: `url("https://assets.change.org/photos/0/wp/di/yEwpDIdCZKErHtC-1600x900-noPad.jpg?1662745359")`,
+        backgroundImage:`url(${homeBanner})`
       }}
     >
       <div className="hero-overlay bg-opacity-50"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md">
-          <h1 className="mb-5 text-5xl  text-purple-200 font-bold">Dreamy Dolls Stores</h1>
+          <h1 className="mb-5 text-5xl  text-purple-50 font-bold">
+            Dreamy Dolls Stores
+          </h1>
           <p className="mb-5 text-lg ">
             Ready to make memories together you’ll always treasure? Discover all
             the experiences our stores offer for a day full of fun!

@@ -11,10 +11,10 @@ const Blog = () => {
           <h2 className="text-3xl font-semibold">
             1 . What is an access token and refresh token?
           </h2>
-          <p>
+          <p className="text-justify">
             <span className="text-2xl text-purple-500"> Access Token: </span>
             <br />
-            <span className="text-lg space-y-2">
+            <span className="text-lg  space-y-2 ">
               An access token is a credential that is issued by an
               authentication server after a user successfully logs in or
               authorizes an application.It represents the user identity and is
@@ -25,7 +25,7 @@ const Blog = () => {
               the request parameters.
             </span>
           </p>
-          <p>
+          <p className="text-justify">
             <span className="text-2xl text-purple-500">Refresh Token: </span>
             <br />
             <span className="text-lg space-y-2">
@@ -47,7 +47,7 @@ const Blog = () => {
             2 . How do they work and where should we store them on the
             client-side?
           </h2>
-          <p>
+          <p className="text-justify">
             <span className="text-lg space-y-2">
               Access tokens should be stored on the client-side but not in
               persistent storage (e.g., cookies or local storage) due to
@@ -68,7 +68,7 @@ const Blog = () => {
           <h2 className="text-3xl font-semibold">
             3 . Compare SQL and NoSQL databases?
           </h2>
-          <p>
+          <p className="text-justify">
             <span className="text-2xl text-purple-500"> SQL Databases:</span>
             <br />
             <span className="text-lg space-y-2">
@@ -87,7 +87,7 @@ const Blog = () => {
               Database, SQL Server.
             </span>
           </p>
-          <p>
+          <p className="text-justify">
             <span className="text-2xl text-purple-500">NoSQL Databases: </span>
             <br />
             <span className="text-lg space-y-2">
@@ -113,7 +113,7 @@ const Blog = () => {
           <h2 className="text-3xl font-semibold">
             4 . What is express js? What is Nest js ?
           </h2>
-          <p>
+          <p className="text-justify">
             <span className="text-2xl text-purple-500"> Express.js:</span>
             <br />
             <span className="text-lg space-y-2">
@@ -130,7 +130,7 @@ const Blog = () => {
               APIs.
             </span>
           </p>
-          <p>
+          <p className="text-justify">
             <span className="text-2xl text-purple-500">NestJS: </span>
             <br />
             <span className="text-lg space-y-2">
@@ -155,9 +155,7 @@ const Blog = () => {
           <h2 className="text-3xl font-semibold">
             5 .What is MongoDB aggregate and how does it work ?
           </h2>
-          <p>
-            
-            
+          <p className="text-justify">
             <span className="text-lg space-y-2">
               MongoDB s aggregation framework is a powerful tool for performing
               advanced data processing and analysis on MongoDB collections. It
@@ -172,8 +170,6 @@ const Blog = () => {
               and performing mathematical or statistical calculations
             </span>
           </p>
-          
-          
         </div>
       </div>
     </div>

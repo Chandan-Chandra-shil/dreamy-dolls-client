@@ -29,7 +29,7 @@ const AllToys = () => {
     <div className="container mx-auto min-h-screen">
       <form onSubmit={handleSubmit}>
         <h1 className="text-center text-purple-500 font-mono font-bold text-4xl py-4 ">
-          Search Your favorite Toys
+          <span className="text-5xl md:text-4xl"> Search Your</span> Favorite Toys
         </h1>
         <div className="text-center my-10 w-full ">
           <input

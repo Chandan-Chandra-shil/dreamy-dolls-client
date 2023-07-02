@@ -11,7 +11,7 @@ const AboutUs = () => {
       <div className="grid md:grid-cols-3 items-center my-12 gap-10">
         <div data-aos="fade-right">
           <img
-            className=" w-full md:border-8 p-5 md:border-purple-500 "
+            className=" w-full md:border-8 p-5  "
             src={about}
             alt=""
           />
