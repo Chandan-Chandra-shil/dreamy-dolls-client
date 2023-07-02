@@ -13,15 +13,15 @@ import img8 from "../../../assets/gellary8.jpg";
 import "./Gallery.css";
 const Gallery = () => {
   return (
-    <div className="container mx-auto py-12">
-      <div className=" text-center py-8">
+    <div className="container mx-auto py-12 ">
+      <div className=" text-center py-8 mx-4">
         <h2 className="text-4xl font-bold mb-4 font-mono text-purple-500 ">Gallery</h2>
-        <p className="text-lg border-b-8 pb-4 mb-5  ">
-          Explore our gallery of charming toy dolls that will capture your heart <br/>
+        <p className="text-lg border-b-8 pb-4 mb-5 text-justify md:text-center   ">
+          Explore our gallery of charming toy dolls that will capture your heart<br/> 
           with their delightful  designs and vibrant colors.
         </p>
       </div>
-      <div className="grid grid-cols-1 b sm:grid-cols-2   md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 mx-4  sm:grid-cols-2   md:grid-cols-3 lg:grid-cols-4 gap-4">
         <div className="relative   ">
           <div className="rounded-lg overflow-hidden shadow">
             <img src={img1} alt="Image 1" className="w-full" />

@@ -6,12 +6,17 @@ import { Link } from "react-router-dom";
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [myToys, setMyToys] = useState([]);
+  const [isAscending, setIsAscending] = useState(true);
 
   useEffect(() => {
-    fetch(`https://dreamy-dolls-server.vercel.app/my-toys/${user?.email}`)
+    fetch(
+      `http://localhost:5000/all-toys?sort=${user?.email}&${
+        isAscending ? "ascending" : "descending"
+      }`
+    )
       .then((res) => res.json())
       .then((data) => setMyToys(data));
-  }, [user]);
+  }, [user, isAscending]);
 
   const handleDelete = (id) => {
     Swal.fire({
@@ -45,13 +50,35 @@ const MyToys = () => {
           My Toys
         </h1>
       </div>
+      <div className="text-center my-8">
+        <h2 className="text-3xl mb-4  font-mon font-semibold text-purple-600">
+          Sort By Price
+        </h2>
+       {/*  <select
+          onClick={() => setIsAscending(!isAscending)}
+          className=" shadow-md border-2  py-2 px-8  text-lg font-semibold"
+        >
+          <option value="Ascending" className="text-lg ">
+            Ascending
+          </option>
+
+          <option value="Descending" className="text-lg">
+            Descending
+          </option>
+        </select> */}
+        <button className="btn btn-secondary" onClick={()=>setIsAscending(!isAscending)}>
+          {
+            isAscending? "Ascending" : "Descending"
+          }
+        </button>
+      </div>
       <div className="overflow-x-auto container mx-auto  w-full ">
         <table className="table  w-full">
           {/* head */}
           <thead>
             <tr>
               <th>#</th>
-              <th>Toy photo url</th>
+              <th>Toy photo </th>
               <th>Toy name</th>
               <th>Sub Category</th>
               <th>Price</th>
@@ -67,7 +94,13 @@ const MyToys = () => {
             {myToys?.map((myToy, index) => (
               <tr key={myToy._id}>
                 <td>{index + 1}</td>
-                <td>{myToy.photo}</td>
+                <td>
+                  <img
+                    className="w-16 h-16 rounded border border-purple-500"
+                    src={myToy?.photo}
+                    alt=""
+                  />
+                </td>
                 <td>{myToy.name}</td>
                 <td>{myToy.category}</td>
                 <td>{myToy.price}</td>

@@ -33,7 +33,7 @@ const UpdateToy = () => {
     };
     console.log(updateToy);
 
-    fetch(`http://localhost:5000/update-toy/${_id}`, {
+    fetch(`https://dreamy-dolls-server.vercel.app/update-toy/${_id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

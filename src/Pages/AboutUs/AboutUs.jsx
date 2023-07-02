@@ -17,10 +17,10 @@ const AboutUs = () => {
           />
         </div>
         <div data-aos="fade-left" className="md:col-span-2 space-y-6 ">
-          <h2 className="text-4xl px-5 text-purple-500 mb-5 font-mono font-bold">
+          <h2 className="text-4xl px-5 text-purple-500 text-center md:text-left mb-5 font-mono font-bold">
             About US
           </h2>
-          <p className="px-5">
+          <p className="px-5 text-justify">
             At Dreamy Dolls, we are passionate about providing a delightful
             collection of exquisitely crafted dolls, enchanting accessories, and
             captivating toys that inspire boundless creativity and bring

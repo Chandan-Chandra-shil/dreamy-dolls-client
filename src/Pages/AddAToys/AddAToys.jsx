@@ -3,7 +3,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 
 const AddAToys = () => {
   const { user } = useContext(AuthContext);
-  console.log("666666666", user);
+
   const handleAddToy = (event) => {
     event.preventDefault();
     const form = event.target;

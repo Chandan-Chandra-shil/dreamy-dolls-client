@@ -10,24 +10,25 @@ import like8 from "../../../assets/collection8.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const OurCollection = () => {
-
   useEffect(() => {
     AOS.init();
-  },[])
-  
+  }, []);
+
   return (
     <div className="my-12 container mx-auto">
-      <div className="text-center space-y-6 mb-12">
+      <div className="text-center space-y-6 mb-12 mx-4">
         <h1 className="text-4xl font-bold font-mono text-purple-500">
           Your online store of collectible dolls
         </h1>
-        <p className="text-md">
+        <p className="text-md text-justify md:text-center ">
           Find your dream doll in the largest catalog of collectible dolls.
-          Discover the most exclusive limited series,
-          <br /> the classic and modern dolls, the most tender and realistic
-          reborn babies, the most adorable
-          <br />
-          fabric dolls, all the accessories you can imagine and much more.
+          Discover the most exclusive limited series the classic and modern
+          <br/>
+          <span>
+            dolls, the most tender and realistic reborn babies, , the most
+            adorable fabric dolls, the accessories you can imagine and much
+            more.
+          </span>
         </p>
       </div>
       <div className=" grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 sm:item-center gap-5 mb-5 ">

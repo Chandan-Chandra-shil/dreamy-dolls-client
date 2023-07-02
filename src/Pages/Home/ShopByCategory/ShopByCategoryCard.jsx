@@ -8,12 +8,12 @@ const ShopByCategoryCard = ({ doll }) => {
   const { photo, name, price, rating, _id } = doll;
 
   return (
-    <div className="md:card md:w-96 md:mx-4 sm:mx-5 hover:bg-purple-200   shadow-xl">
+    <div className="md:card md:w-96 md:mx-4 mx-4 sm:mx-5 hover:bg-purple-200   shadow rounded">
       <figure className="md:border-8">
         <img className="md:w-96" src={photo} alt="photo" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{name}</h2>
+        <h2 className="card-title text-2xl">{name}</h2>
         <h2 className="card-title"> Price : $ {price}</h2>
         <h2 className="card-title">
           <Rating
